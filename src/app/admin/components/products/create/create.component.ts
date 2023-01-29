@@ -1,13 +1,13 @@
+import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { BaseComponent, SpinnerType } from './../../../../base/base.component';
+import { Create_Product } from './../../../../contracts/create_product';
 import {
   AlertifyService,
   MessageType,
   Position,
 } from './../../../../services/admin/alertify.service';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { BaseComponent, SpinnerType } from './../../../../base/base.component';
-import { Create_Product } from './../../../../contracts/create_product';
 import { ProductService } from './../../../../services/common/models/product.service';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-create',
@@ -48,7 +48,7 @@ export class CreateComponent extends BaseComponent implements OnInit {
         this.alertify.message(errorMessage, {
           dismissOthers: true,
           messageType: MessageType.Error,
-          position: Position.TopRight,
+          position: Position.TopRight
         });
       }
     );

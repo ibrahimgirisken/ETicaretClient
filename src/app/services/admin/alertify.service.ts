@@ -7,7 +7,6 @@ declare var alertify: any;
 export class AlertifyService {
   constructor() {}
 
-  // message(message: string, messageType: MessageType,position:Position,delay:number=3,dismissOther:boolean=false) {
   message(message: string, options:Partial<AlertifyOptions>) {
     alertify.set('notifier','delay', options.delay);
     alertify.set('notifier','position', options.position);
@@ -24,7 +23,7 @@ export class AlertifyService {
 export class AlertifyOptions{
   messageType:MessageType=MessageType.Message;
   position:Position=Position.BottomRight;
-  delay:number=3;
+  delay:number=5;
   dismissOthers:boolean=false;
 }
 
