@@ -51,6 +51,6 @@ export class ListComponent extends BaseComponent implements OnInit {
   }
 
   async ngOnInit() {
-    await this.getProducts();
+     await this.getProducts();
   }
 }
